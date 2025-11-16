@@ -52,7 +52,7 @@ export default function DataEnrichmentTool() {
         setProgress(Math.round(((i + 1) / dataLines.length) * 100));
 
         // Call Claude API to enrich the data
-        const response = await fetch('https://api.anthropic.com/v1/messages', {
+        const response = await fetch('http://data-enrichment-backend-production.up.railway.app/', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
